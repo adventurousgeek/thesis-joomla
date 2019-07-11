@@ -4,7 +4,13 @@
 
 <title>Thesis Form</title>
 
-<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.css">
+
+<style>
+  label {
+    font-size: 1rem;
+  }
+</style>
 
 </head>
 
@@ -13,58 +19,66 @@
   <div class="container">
 
     <form>
-        <div class="form-group">
-            <label for="orderName">Order Name</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Order Name">
+      <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="medium-12 cell">
+            <label for="orderName">Order Name
+              <input type="text" placeholder="Enter Your Order Name">              
+            </label>
         </div>
-        <div class="form-group">
-            <label for="orderName">Colour or Black and White Print</label><br>
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="printingColor1" name="customRadioInline1" class="custom-control-input">
-              <label class="custom-control-label" for="printingColor1">Colour</label>
-            </div>
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="printingColor2" name="customRadioInline1" class="custom-control-input">
-              <label class="custom-control-label" for="printingColor2">Black & White</label>
-            </div>
+      </div>
+      <div class="grid-x grid-padding-x">
+        <div class="medium-12 cell">
+          <fieldset class="small-12 large-6 columns">
+            <legend>Colour or Black and White Print</legend>
+            <input type="radio" name="thesis-color" value="colour" id="printColour" required><label for="printColour">Colour</label>
+            <input type="radio" name="thesis-color" value="blackAndWhite" id="printBNW"><label for="printBlackAndWhite">Black & White</label>
+          </fieldset>
         </div>
-        <div class="form-group row">
-            <div class="col">
-                <label for="numberOfCopies">Number of Copies</label>
-                <input type="number" class="form-control" name="quantity" min="1" max="500" placeholder="1">
-            </div>
-            <div class="col">
-                <label for="numberOfPages">Number of Pages</label>
-                <input type="number" class="form-control" name="quantity" min="1" max="500" placeholder="1">
-            </div>
+      </div>
+      <div class="grid-x grid-padding-x">
+          <div class="medium-6 cell">
+              <label for="numberOfCopies">Number of Copies
+              <input type="number" class="form-control" name="quantity" min="1" max="500" placeholder="1">
+              </label>
+          </div>
+          <div class="medium-6 cell">
+              <label for="numberOfPages">Number of Pages
+              <input type="number" class="form-control" name="quantity" min="1" max="500" placeholder="1">
+              </label>
+          </div>
         </div>
         
-        <div class="form-group">
-            <label for="orderName">Colour of Embossed Logo</label><br>
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="colorEmbossedLogo1" name="customRadioInline2" class="custom-control-input">
-              <label class="custom-control-label" for="colorEmbossedLogo1">Silver</label>
-            </div>
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="colorEmbossedLogo2" name="customRadioInline2" class="custom-control-input">
-              <label class="custom-control-label" for="colorEmbossedLogo2">Gold</label>
+        <div class="grid-x grid-padding-x">
+          <div class="medium-12 cell">
+            <fieldset class="small-12 large-6 columns">
+              <legend>Colour of Embossed Logo</legend>
+              <input type="radio" name="color-logo" value="silver" id="embossSilver" required><label for="embossSilver">Silver</label>
+              <input type="radio" name="color-logo" value="gold" id="embossGold"><label for="embossGold">Gold</label>
+            </fieldset>
+          </div>
+        </div>
+        <div class="grid-x grid-padding-x">
+            <div class="medium-12 cell">
+              <label for="thesisFileUpload" class="button">Upload Your File</label>
+              <input type="file" id="thesisFileUpload" class="show-for-sr">
             </div>
         </div>
-        <div class="form-group">
-            <label for="uploadYourFile">Upload Your File</label>
-            <input type="file" class="form-control-file" id="thesisFileUpload">
-        </div>
-        <div class="form-group">
-            <label for="paperType">Paper Type</label>
+        <div class="grid-x grid-padding-x">
+          <div class="medium-12 cell">
+            <label for="paperType">Paper Type
             <select class="custom-select">
                 <option selected>120gsm</option>
                 <option value="1">80gsm</option>
             </select>
+            </label>
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary mb-2">Add to Cart</button>    
+        <input type="submit" class="button" value="Add to Cart">
+      </div>
     </form>
   </div>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.js"></script>
 </body>
 </html>
